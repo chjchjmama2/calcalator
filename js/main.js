@@ -12,7 +12,6 @@ function inputCalculator() {
 
     items.forEach((item) => {
         item.addEventListener('click', (e) => {
-            if (!isNaN(e.target.innerText)) {
                 if (checkbug(e, cal)) {
                 } else if (e.target.innerText == 'AC') {
                     cal = []
@@ -28,7 +27,6 @@ function inputCalculator() {
                 if (cal.length == 0) {
                     input.innerText = 0
                 }
-            }
         })
     })
 }
