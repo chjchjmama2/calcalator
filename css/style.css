@@ -71,7 +71,7 @@ body {
 }
 
 
-@media all and (max-width: 480px) {
+@media all and (max-width: 320px) {
     .container {
         margin-top: 10px;
         width: 200px;
@@ -83,5 +83,8 @@ body {
 
     .keyboard {
         grid-template-rows: 50px 50px 50px 50px 50px;
+    }
+    .screen .input {
+        font-size: medium;
     }
 }
