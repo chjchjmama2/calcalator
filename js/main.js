@@ -12,20 +12,22 @@ function inputCalculator() {
 
     items.forEach((item) => {
         item.addEventListener('click', (e) => {
-            if (checkbug(e, cal)) {
-            } else if (e.target.innerText == 'AC') {
-                cal = []
-            } else if (e.target.innerText == 'DEL') {
-                cal.pop()
-            } else if (e.target.innerText == '=') {
-                cal = convert(cal)
-                return
-            } else {
-                cal = checkInputAndExcute(e, cal)
-            }
-            input.innerText = cal.join('')
-            if(cal.length == 0) {
-                input.innerText = 0
+            if (!isNaN(e.target.innerText)) {
+                if (checkbug(e, cal)) {
+                } else if (e.target.innerText == 'AC') {
+                    cal = []
+                } else if (e.target.innerText == 'DEL') {
+                    cal.pop()
+                } else if (e.target.innerText == '=') {
+                    cal = convert(cal)
+                    return
+                } else {
+                    cal = checkInputAndExcute(e, cal)
+                }
+                input.innerText = cal.join('')
+                if (cal.length == 0) {
+                    input.innerText = 0
+                }
             }
         })
     })
