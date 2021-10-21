@@ -47,6 +47,7 @@ body {
     background: rgb(190, 190, 190);
     font-size: large;
     cursor: pointer;
+    user-select: none;
 }
 
 .item:hover {
